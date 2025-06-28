@@ -29,8 +29,8 @@ K = lqr(A, B, Q, R, N);
 perturbation_standard_deviation = 9.6e7;
 
 % Ganancias backstepping
-K1 = 1;
-K2 = 1;
+K1 = 1e-3;
+K2 = 4.5;
 
 
 %% Parte 2 (preguntas 5, 6, 7, 8 y 9)
