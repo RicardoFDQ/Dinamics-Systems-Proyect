@@ -1,4 +1,4 @@
-%% Parte 1 (preguntas 1, 2, 3 y 4)
+%% Parte 1 (preguntas 1, 2, 3, 4 y 11)
 clear
 
 R_earth = 6.378e6;
@@ -50,7 +50,10 @@ u2_eq = 2 * m * d_r_ref * d_theta_ref / r_ref;
 x_eq = [r_ref; d_r_ref; theta_ref; d_theta_ref];
 u_eq = [u1_eq; u2_eq];
 
-A = [0 1 0 0; (2*eta/r_ref^3)+d_theta_ref^2  0  0  2*r_ref*d_theta_ref; 0 0 0 1; 2*d_r_ref*d_theta_ref/r_ref^2  -2*d_theta_ref/r_ref  0  -2*d_r_ref/r_ref];
+A = [0 1 0 0; 
+    (2*eta/r_ref^3)+d_theta_ref^2  0  0  2*r_ref*d_theta_ref;
+    0 0 0 1;
+    2*d_r_ref*d_theta_ref/r_ref^2  -2*d_theta_ref/r_ref  0  -2*d_r_ref/r_ref];
 B = [0 0; 1/m 0; 0 0; 0 1/m];
 C = eye(4);
 D = zeros(4, 2);
